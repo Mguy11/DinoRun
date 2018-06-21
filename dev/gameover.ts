@@ -1,12 +1,23 @@
 class GameOverScreen {
+    private div: HTMLElement
+    private game : Game
 
-   constructor()
-   {
+    constructor(g:Game) {
+        this.game = g
 
-   }
-  
-   public update()
-   {
-       
-   }
+        this.div = document.createElement("splash")
+        document.body.appendChild(this.div)
+
+        this.div.addEventListener("click", ()=>this.splashClicked())
+        this.div.innerHTML = "Helaas..."
+    }
+
+    public update(){
+
+    }
+
+    private splashClicked() {
+        
+        this.game.showStartScreen()
+    }
 }

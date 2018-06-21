@@ -16,8 +16,7 @@ class StartScreen {
     }
 
     private splashClicked() {
-        // TODO: geef door aan 'game' dat het spel gestart moet worden
-
+        
         this.game.showPlayScreen()
     }
 }

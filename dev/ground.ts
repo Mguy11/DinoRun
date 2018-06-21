@@ -1,27 +1,13 @@
-///<reference path="gameObject.ts"/>
+class Ground{
 
-class Ground extends gameObject{
-
-    private x: number 
-    private y: number 
-
-    
-    private innerHeight: number
+    private ground: HTMLElement
 
 
-    constructor(pos:[number, number], tag:string)
+
+    constructor(playscreen:PlayScreen)
     {
-        super(pos,tag)
-        this.innerHeight = innerHeight - 50
-        
-        this.x = 0
-        this.y = this.innerHeight
-        
-    }
+        this.ground = document.createElement("ground");
+        document.body.appendChild(this.ground);
 
-    public update()
-    {
-        
     }
-    
 }

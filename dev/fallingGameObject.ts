@@ -1,27 +1,43 @@
 ///<reference path="gameObject.ts"/>
 
-class FallingGameObject extends gameObject{
+class FallingGameObject{
 
+    protected _speed:number = 0;            
+    private x:number          
+    private y:number          
+    private htmlElement:HTMLElement;  
 
-    private fallingSpeed: [number, number]
-    private gravitly: number
+        
+    public constructor(tag:string) {
 
+        this.htmlElement = document.createElement(tag)
+    	document.body.appendChild(this.htmlElement)
+        
+        this.x = Math.random() * (window.innerWidth)
+        this.y = -400 - (Math.random() * 450) 
 
-    constructor(pos:[number, number], tag:string, initialSpeed: [number, number], gravity:number)
-    {   
-        super(pos,tag)
-        this.fallingSpeed = initialSpeed
-        this.gravitly = gravity
         this.update()
+        
     }
 
-    public update()
-    {
-        this.fallingSpeed[1] += this.gravitly
+    public update():void {
+        this.y += this._speed
+        this.htmlElement.style.transform = `translate(${this.x}px, ${this.y}px)`
+        
+        if (this.y + this.htmlElement.clientHeight > window.innerHeight){
+            this.reset()
+        }
+    }
 
-        this.shift([this.fallingSpeed[0], this.fallingSpeed[1]])
-        console.log("update")
+    public getRectangle():any {
+        return this.htmlElement.getBoundingClientRect()
+    }
 
+    public reset(){
+        console.log('reset')
+        this.x = Math.random() * (window.innerWidth - 200)
+        this.y = -400 - (Math.random() * 450) 
+        
     }
 
 
