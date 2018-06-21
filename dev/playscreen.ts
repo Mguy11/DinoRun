@@ -1,54 +1,29 @@
 class PlayScreen {
 
-    game:Game
-    
-    private player: Player
-    private platform: Platforms[] = []
-    private ground: Ground[] = []
+    public game:Game
+
+    private eggCount: number = 0.01
+    private eggs: Array<FallingGameObject> = []
+    private gameOver: boolean = false
    
 
     constructor(g:Game) {
-        
+        console.log("Game created!")
         this.game = g
-        this.player = new Player()
-
-        for (let i = 0; i < 5; i++) {
-            this.platform.push(new Platforms())
-        }
-
-        for (let i = 0; i < 5; i++) {
-            this.ground.push(new Ground())
-            
-            
-        }
+        
+        this.update()
+       
 
     }
     
     public update(): void {
 
-        for (let p of this.platform) {
-            if (this.checkCollision(p.getRectangle(), this.player.getRectangle()))
+         
+
+            if( Math.random() < this.eggCount)
             {
-                    this.player.hitPlatform()
-                   
+                this.eggs.push(new Egg())
             }
-
-            p.update()
-
-            
-        }
-
-        for (let g of this.ground) {
-            if (this.checkCollision(g.getRectangle(), this.player.getRectangle()))
-            {
-                    this.player.hitPlatform()
-                   
-            }
-            g.update()
-            
-        }
-
-        this.player.update()
        
         
     }

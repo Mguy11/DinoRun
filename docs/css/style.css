@@ -35,15 +35,22 @@ player {
 splash {
     font-size:2em;
     cursor: pointer;
-    width:500px;
-    height:100px;
+    width:500px; height:100px;
     margin-top:calc(50vh - 50px);
     margin-left:calc(50vw - 250px);
     text-align:center;
 }
 
 ground{
-    background-image: url(../images/Grass_1.png);
-    width:600px; height: 108px;
+    background-image: url(../images/Ground.png);
+    width:100%; height: 108px;
+ 
     
+}
+
+egg{
+    background-image: url(../images/egg.png);
+    width: 45px; height: 50px;
+    position: absolute;
+    display: block;
 }

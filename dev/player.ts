@@ -1,7 +1,7 @@
 /// <reference path="playscreen.ts"/>
+/// <reference path="gameObject.ts"/>
 
-class Player {
-    private div: HTMLElement
+class Player extends gameObject {
  
     private x: number 
     private y: number 
@@ -21,11 +21,9 @@ class Player {
     private innerWidth = window.innerWidth - 173
     private innerHeight = window.innerHeight - 207
 
-    constructor(){
+    constructor(pos:[number, number], tag:string){
 
-        this.div = document.createElement("player")
-        document.body.appendChild(this.div)
-
+        super(pos,tag)
         this.upkey   = 17
         this.leftkey = 30
         this.rightkey = 32
@@ -40,10 +38,6 @@ class Player {
        console.log(keypressdown);
 
 
-    }
-
-    public getRectangle() {
-        return this.div.getBoundingClientRect()
     }
 
     private onKeyDown(e: KeyboardEvent): void {
@@ -97,7 +91,6 @@ class Player {
         if (newY > 0 && newY + 100 < innerHeight) this.y = newY
         
 
-        this.div.style.transform = `translate(${this.x}px, ${this.y}px)`
          
 
     }

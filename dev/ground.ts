@@ -1,33 +1,27 @@
-class Ground{
+///<reference path="gameObject.ts"/>
 
-    private ground: HTMLElement
+class Ground extends gameObject{
 
     private x: number 
     private y: number 
 
+    
     private innerHeight: number
 
 
-    constructor()
+    constructor(pos:[number, number], tag:string)
     {
-        this.ground = document.createElement("ground")
-        document.body.appendChild(this.ground)
-
+        super(pos,tag)
         this.innerHeight = innerHeight - 50
+        
         this.x = 0
         this.y = this.innerHeight
         
     }
 
-
-    public getRectangle() {
-        return this.ground.getBoundingClientRect()
-    }
-    
-
     public update()
     {
-        this.ground.style.transform = `translate(${this.x}px, ${this.y}px)`
+        
     }
     
 }
