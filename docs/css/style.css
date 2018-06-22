@@ -44,7 +44,6 @@ splash {
 ground{
     background-image: url(../images/Ground.png);
     width:100%; height: 108px;
-    margin-bottom: 5%;
     
 }
 

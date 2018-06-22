@@ -95,7 +95,13 @@ var Ground = (function () {
     function Ground(playscreen) {
         this.ground = document.createElement("ground");
         document.body.appendChild(this.ground);
+        this.innerHeight = innerHeight - 70;
+        this.x = 0;
+        this.y = this.innerHeight;
     }
+    Ground.prototype.update = function () {
+        this.ground.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
+    };
     return Ground;
 }());
 var Meteorite = (function (_super) {
@@ -116,6 +122,7 @@ var PlayScreen = (function () {
         this.score = 0;
         this.lives = 0;
         this.game = g;
+        this.ground = new Ground(this);
         this.scoreElement = document.createElement("scores");
         document.body.appendChild(this.scoreElement);
         this.liveElement = document.createElement("lives");
@@ -133,6 +140,7 @@ var PlayScreen = (function () {
     PlayScreen.prototype.update = function () {
         console.log('update');
         this.player.update();
+        this.ground.update();
         for (var _i = 0, _a = this.eggs; _i < _a.length; _i++) {
             var g = _a[_i];
             g.update();
@@ -185,7 +193,7 @@ var Player = (function () {
         this.leftkey = 30;
         this.rightkey = 32;
         this.x = 25;
-        this.y = 850;
+        this.y = 800;
         var keypressup = window.addEventListener("keydown", function (e) { return _this.onKeyDown(e); });
         var keypressdown = window.addEventListener("keyup", function (e) { return _this.onKeyUp(e); });
         console.log(keypressup);
@@ -194,10 +202,10 @@ var Player = (function () {
     Player.prototype.onKeyDown = function (e) {
         switch (e.key) {
             case "a":
-                this.leftSpeed = 10;
+                this.leftSpeed = 15;
                 break;
             case "d":
-                this.rightSpeed = 10;
+                this.rightSpeed = 15;
                 break;
         }
     };
@@ -232,7 +240,7 @@ var StartScreen = (function () {
         this.div = document.createElement("splash");
         document.body.appendChild(this.div);
         this.div.addEventListener("click", function () { return _this.splashClicked(); });
-        this.div.innerHTML = "START THE GIMMA";
+        this.div.innerHTML = "Start DinoRun";
     }
     StartScreen.prototype.update = function () {
     };

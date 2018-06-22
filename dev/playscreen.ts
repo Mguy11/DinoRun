@@ -9,10 +9,12 @@ class PlayScreen {
     private liveElement:HTMLElement;
     private lives:number = 0;
     private game: Game
+    private ground: Ground
 
     constructor(g:Game){
         this.game = g
-      
+        
+        this.ground = new Ground(this)
         this.scoreElement = document.createElement("scores");
         document.body.appendChild(this.scoreElement);
         this.liveElement = document.createElement("lives");
@@ -38,6 +40,7 @@ class PlayScreen {
     public update(){
         console.log('update')
         this.player.update()
+        this.ground.update()
         
         for (var g of this.eggs) {
             g.update()

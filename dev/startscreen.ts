@@ -8,7 +8,7 @@ class StartScreen {
         this.div = document.createElement("splash")
         document.body.appendChild(this.div)
         this.div.addEventListener("click", ()=>this.splashClicked())
-        this.div.innerHTML = "START THE GIMMA"
+        this.div.innerHTML = "Start DinoRun"
     }
 
     public update(){

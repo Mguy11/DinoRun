@@ -32,7 +32,7 @@ class Player {
         this.rightkey = 32
         
         this.x      = 25
-        this.y      = 850
+        this.y      = 800
         
        let keypressup = window.addEventListener("keydown", (e: KeyboardEvent) => this.onKeyDown(e));
        let keypressdown = window.addEventListener("keyup", (e: KeyboardEvent) => this.onKeyUp(e));
@@ -46,10 +46,10 @@ class Player {
     private onKeyDown(e: KeyboardEvent): void {
         switch (e.key) {
             case "a":
-                this.leftSpeed = 10
+                this.leftSpeed = 15
                 break
             case "d":
-                this.rightSpeed = 10
+                this.rightSpeed = 15
                 break
         }
     }
