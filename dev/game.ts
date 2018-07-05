@@ -25,6 +25,12 @@ class Game {
         this.screen = new PlayScreen(this)
     }
 
+    public showmultiplayerScreen()
+    {
+        document.body.innerHTML = ""
+        this.screen = new MultiplayerScreen(this)
+    }
+
     public showStartScreen()
     {
         document.body.innerHTML = ""
@@ -33,7 +39,6 @@ class Game {
 
     public showGameOverScreen()
     {
-        document.body.innerHTML = ""
         document.body.innerHTML = ""
         this.screen = new GameOverScreen(this)
        
