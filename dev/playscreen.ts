@@ -3,7 +3,7 @@ class PlayScreen {
     private meteorites:Array<Meteorite> = []
     private player:Player
     private maxEggs:number = 8
-    private maxMeteoritess:number = 4
+    private maxMeteorites:number = 4
     private scoreElement:HTMLElement;
     private score:number = 0;
     private liveElement:HTMLElement;
@@ -24,12 +24,12 @@ class PlayScreen {
 
         this.updateLives(3)
 
-        this.player = new Player(this)
+        this.player = new Player()
 
         for(let i = 0; i < this.maxEggs; i++){
             this.eggs.push(new Egg())
         }
-        for(let i = 0; i < this.maxMeteoritess; i++){
+        for(let i = 0; i < this.maxMeteorites; i++){
             this.meteorites.push(new Meteorite())
         }
  

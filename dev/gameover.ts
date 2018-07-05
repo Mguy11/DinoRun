@@ -9,7 +9,7 @@ class GameOverScreen {
         document.body.appendChild(this.div)
 
         this.div.addEventListener("click", ()=>this.splashClicked())
-        this.div.innerHTML = "Helaas..."
+        this.div.innerHTML = "Game Over"
     }
 
     public update(){

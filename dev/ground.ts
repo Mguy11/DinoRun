@@ -1,26 +1,23 @@
-class Ground{
+///<reference path="gameObject.ts"/>
 
-    private ground: HTMLElement
+class Ground extends GameObject{
 
-    private x: number
-    private y: number
-
-    private innerHeight: number
+   
 
     constructor(playscreen:PlayScreen)
     {
-        this.ground = document.createElement("ground");
-        document.body.appendChild(this.ground);
+        
+        let x = 0
+        let y = innerHeight -70
 
-        this.innerHeight = innerHeight - 70
-        this.x = 0
-        this.y = this.innerHeight
+        super([x,y],"ground")
 
 
     }
 
     update()
     {
-        this.ground.style.transform = `translate(${this.x}px, ${this.y}px)`
+        
     }
+
 }

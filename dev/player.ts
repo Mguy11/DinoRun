@@ -4,7 +4,6 @@
 class Player {
 
     private player: HTMLElement
-
     private x: number 
     private y: number 
 
@@ -22,8 +21,8 @@ class Player {
     private innerWidth = window.innerWidth - 173
     private innerHeight = window.innerHeight - 207
 
-    constructor(playscreen:PlayScreen){
-
+    constructor(){
+        
         this.player = document.createElement("player")
         document.body.appendChild(this.player)
 
@@ -65,10 +64,9 @@ class Player {
         }
     }
 
-    public getRectangle() {
+    public getRectangle(){
         return this.player.getBoundingClientRect()
     }
-    
 
     public update(){
 

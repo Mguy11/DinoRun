@@ -10,8 +10,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var GameObject = (function () {
-    function GameObject() {
+    function GameObject(pos, tag) {
+        this.position = [0, 0];
+        this.htmlElement = document.createElement(tag);
+        document.body.appendChild(this.htmlElement);
+        this.spawn(pos);
     }
+    GameObject.prototype.getRectangle = function () {
+        return this.htmlElement.getBoundingClientRect();
+    };
+    GameObject.prototype.spawn = function (pos) {
+        this.position = pos;
+        this.htmlElement.style.transform = "translate(" + this.position[0] + "px, " + this.position[1] + "px)";
+    };
     return GameObject;
 }());
 var FallingGameObject = (function () {
@@ -82,7 +93,7 @@ var GameOverScreen = (function () {
         this.div = document.createElement("splash");
         document.body.appendChild(this.div);
         this.div.addEventListener("click", function () { return _this.splashClicked(); });
-        this.div.innerHTML = "Helaas...";
+        this.div.innerHTML = "Game Over";
     }
     GameOverScreen.prototype.update = function () {
     };
@@ -91,19 +102,19 @@ var GameOverScreen = (function () {
     };
     return GameOverScreen;
 }());
-var Ground = (function () {
+var Ground = (function (_super) {
+    __extends(Ground, _super);
     function Ground(playscreen) {
-        this.ground = document.createElement("ground");
-        document.body.appendChild(this.ground);
-        this.innerHeight = innerHeight - 70;
-        this.x = 0;
-        this.y = this.innerHeight;
+        var _this = this;
+        var x = 0;
+        var y = innerHeight - 70;
+        _this = _super.call(this, [x, y], "ground") || this;
+        return _this;
     }
     Ground.prototype.update = function () {
-        this.ground.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
     };
     return Ground;
-}());
+}(GameObject));
 var Meteorite = (function (_super) {
     __extends(Meteorite, _super);
     function Meteorite() {
@@ -118,7 +129,7 @@ var PlayScreen = (function () {
         this.eggs = [];
         this.meteorites = [];
         this.maxEggs = 8;
-        this.maxMeteoritess = 4;
+        this.maxMeteorites = 4;
         this.score = 0;
         this.lives = 0;
         this.game = g;
@@ -129,11 +140,11 @@ var PlayScreen = (function () {
         document.body.appendChild(this.liveElement);
         this.updateScore(0);
         this.updateLives(3);
-        this.player = new Player(this);
+        this.player = new Player();
         for (var i = 0; i < this.maxEggs; i++) {
             this.eggs.push(new Egg());
         }
-        for (var i = 0; i < this.maxMeteoritess; i++) {
+        for (var i = 0; i < this.maxMeteorites; i++) {
             this.meteorites.push(new Meteorite());
         }
     }
@@ -180,7 +191,7 @@ var PlayScreen = (function () {
     return PlayScreen;
 }());
 var Player = (function () {
-    function Player(playscreen) {
+    function Player() {
         var _this = this;
         this.leftSpeed = 0;
         this.rightSpeed = 0;
@@ -232,6 +243,32 @@ var Player = (function () {
         this.player.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
     };
     return Player;
+}());
+var Sound = (function () {
+    function Sound() {
+        this.soundFiles = ['sounds/217.mp3', 'sounds/226.mp3', 'sounds/231.mp3', 'sounds/2767.mp3', 'sounds/2773.mp3'];
+        this.sounds = [];
+        for (var i = 0; i < 5; i++) {
+            var h = new Howl({
+                src: [this.soundFiles[i]],
+                loop: false
+            });
+            this.sounds.push(h);
+        }
+    }
+    Sound.getInstance = function () {
+        if (Sound.instance == null) {
+            Sound.instance = new Sound();
+        }
+        return Sound.instance;
+    };
+    Sound.prototype.playFireworks = function () {
+        var i = Math.floor(Math.random() * 5);
+        console.log("beng");
+        this.sounds[i].play();
+    };
+    Sound.instance = null;
+    return Sound;
 }());
 var StartScreen = (function () {
     function StartScreen(g) {
