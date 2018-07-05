@@ -246,28 +246,10 @@ var Player = (function () {
 }());
 var Sound = (function () {
     function Sound() {
-        this.soundFiles = ['sounds/217.mp3', 'sounds/226.mp3', 'sounds/231.mp3', 'sounds/2767.mp3', 'sounds/2773.mp3'];
-        this.sounds = [];
-        for (var i = 0; i < 5; i++) {
-            var h = new Howl({
-                src: [this.soundFiles[i]],
-                loop: false
-            });
-            this.sounds.push(h);
-        }
     }
-    Sound.getInstance = function () {
-        if (Sound.instance == null) {
-            Sound.instance = new Sound();
-        }
-        return Sound.instance;
+    Sound.prototype.playPling = function () {
+        var pling = new Howl();
     };
-    Sound.prototype.playFireworks = function () {
-        var i = Math.floor(Math.random() * 5);
-        console.log("beng");
-        this.sounds[i].play();
-    };
-    Sound.instance = null;
     return Sound;
 }());
 var StartScreen = (function () {
