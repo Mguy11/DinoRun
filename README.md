@@ -16,6 +16,8 @@ Je speelt hier local multiplayer tegen iemand anders. De opdracht is proberen me
 
 Klassendiagram
 ---
+![dinorun](https://user-images.githubusercontent.com/15998532/42403393-32a98d90-8181-11e8-911b-327ea60587d1.png)
+
 
 OOP principes
 ===
