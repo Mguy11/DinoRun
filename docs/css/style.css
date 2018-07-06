@@ -21,11 +21,6 @@ body * {
     background-repeat: no-repeat;
 }
 
-platform1 {
-    background-image: url(../images/platform2.png);
-    width:300px; height:59px;
-    
-}
 
 player1 {
     
@@ -35,8 +30,17 @@ player1 {
 
 player2 {
     
-    background-image: url(../images/Dino1.png);
+    background-image: url(../images/Dino2.png);
     width:92px; height:110px;
+}
+
+title {
+    font-size:4em;
+    cursor: pointer;
+    width:500px; height:100px;
+    margin-top:calc(20vh - 50px);
+    margin-left:calc(50vw - 250px);
+    text-align:center;
 }
 
 splash {
@@ -51,7 +55,25 @@ splash2 {
     font-size:2em;
     cursor: pointer;
     width:500px; height:100px;
-    margin-top:200px;
+    margin-top:calc(60vh - 50px);
+    margin-left:calc(50vw - 250px);
+    text-align:center;
+}
+
+keys {
+    font-size:1em;
+    cursor: pointer;
+    width:650px; height:100px;
+    margin-top:calc(80vh - 50px);
+    margin-left:calc(47vw - 250px);
+    text-align:center;
+}
+
+rules {
+    font-size:1em;
+    cursor: pointer;
+    width:500px; height:100px;
+    margin-top:calc(90vh - 50px);
     margin-left:calc(50vw - 250px);
     text-align:center;
 }
@@ -82,7 +104,18 @@ lives{
     width:240px;
 }
 lives2{
-    margin-left:30%;
+    margin-left:85%;
+    margin-right:15%;
+    width:240px;
+}
+
+scores{
+    margin-left:5%;
     margin-right:85%;
+    width:240px;
+}
+scores2{
+    margin-left:75%;
+    margin-right:25%;
     width:240px;
 }

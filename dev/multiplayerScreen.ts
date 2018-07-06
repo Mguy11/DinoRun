@@ -115,12 +115,12 @@ class MultiplayerScreen {
 
     private updateScore(points:number) {
         this.score = this.score + points;
-        this.scoreElement.innerHTML = "Score: " + this.score;
+        this.scoreElement.innerHTML = "Score Player1: " + this.score;
     }
 
     private updateLives(points:number) {
         this.lives = this.lives + points;
-        this.lifeElement.innerHTML = "Levens: " + this.lives;
+        this.lifeElement.innerHTML = "Lives Player1: " + this.lives;
         if(this.lives <= 0){
             this.game.showGameOverScreen()
         }
@@ -128,12 +128,12 @@ class MultiplayerScreen {
 
     private updateScore2(points:number) {
         this.score2 = this.score2 + points;
-        this.scoreElement2.innerHTML = "Score: " + this.score2;
+        this.scoreElement2.innerHTML = "Score Player2: " + this.score2;
     }
 
     private updateLives2(points:number) {
         this.lives2 = this.lives2 + points;
-        this.lifeElement2.innerHTML = "Levens: " + this.lives2;
+        this.lifeElement2.innerHTML = "Lives Player2: " + this.lives2;
         if(this.lives2 <= 0){
             this.game.showGameOverScreen()
         }

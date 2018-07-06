@@ -215,22 +215,22 @@ var MultiplayerScreen = (function () {
     };
     MultiplayerScreen.prototype.updateScore = function (points) {
         this.score = this.score + points;
-        this.scoreElement.innerHTML = "Score: " + this.score;
+        this.scoreElement.innerHTML = "Score Player1: " + this.score;
     };
     MultiplayerScreen.prototype.updateLives = function (points) {
         this.lives = this.lives + points;
-        this.lifeElement.innerHTML = "Levens: " + this.lives;
+        this.lifeElement.innerHTML = "Lives Player1: " + this.lives;
         if (this.lives <= 0) {
             this.game.showGameOverScreen();
         }
     };
     MultiplayerScreen.prototype.updateScore2 = function (points) {
         this.score2 = this.score2 + points;
-        this.scoreElement2.innerHTML = "Score: " + this.score2;
+        this.scoreElement2.innerHTML = "Score Player2: " + this.score2;
     };
     MultiplayerScreen.prototype.updateLives2 = function (points) {
         this.lives2 = this.lives2 + points;
-        this.lifeElement2.innerHTML = "Levens: " + this.lives2;
+        this.lifeElement2.innerHTML = "Lives Player2: " + this.lives2;
         if (this.lives2 <= 0) {
             this.game.showGameOverScreen();
         }
@@ -296,7 +296,7 @@ var PlayScreen = (function () {
     };
     PlayScreen.prototype.updateLives = function (points) {
         this.lives = this.lives + points;
-        this.lifeElement.innerHTML = "Levens: " + this.lives;
+        this.lifeElement.innerHTML = "Lives: " + this.lives;
         if (this.lives <= 0) {
             this.game.showGameOverScreen();
         }
@@ -375,7 +375,7 @@ var Player2 = (function (_super) {
         _this.grounded = true;
         _this.leftkey = 75;
         _this.rightkey = 77;
-        _this.x = 25;
+        _this.x = 1820;
         _this.y = 800;
         var keypressup = window.addEventListener("keydown", function (e) { return _this.onKeyDown(e); });
         var keypressdown = window.addEventListener("keyup", function (e) { return _this.onKeyUp(e); });
@@ -422,10 +422,19 @@ var StartScreen = (function () {
         document.body.appendChild(this.div);
         this.multi = document.createElement("splash2");
         document.body.appendChild(this.multi);
+        this.title = document.createElement("title");
+        document.body.appendChild(this.title);
+        this.keys = document.createElement("keys");
+        document.body.appendChild(this.keys);
+        this.rules = document.createElement("rules");
+        document.body.appendChild(this.rules);
+        this.title.innerHTML = "DinoRun";
         this.div.addEventListener("click", function () { return _this.splashClicked(); });
-        this.div.innerHTML = "Start DinoRun - Solo";
+        this.div.innerHTML = "Solo";
         this.multi.addEventListener("click", function () { return _this.splashClicked2(); });
-        this.multi.innerHTML = "Start DinoRun - Versus";
+        this.multi.innerHTML = "Versus";
+        this.keys.innerHTML = "Solo: A + D keys  Versus: player1 A + D keys, player2 J + L keys";
+        this.rules.innerHTML = "Dodge the meteorites, catch the eggs!";
     }
     StartScreen.prototype.update = function () {
     };

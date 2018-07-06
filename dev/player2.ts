@@ -22,7 +22,7 @@ class Player2 extends Player{
         this.leftkey = 75
         this.rightkey = 77
         
-        this.x      = 25
+        this.x      = 1820
         this.y      = 800
 
          

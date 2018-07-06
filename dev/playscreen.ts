@@ -86,7 +86,7 @@ class PlayScreen {
 
     private updateLives(points:number) {
         this.lives = this.lives + points;
-        this.lifeElement.innerHTML = "Levens: " + this.lives;
+        this.lifeElement.innerHTML = "Lives: " + this.lives;
         if(this.lives <= 0){
             this.game.showGameOverScreen()
         }
