@@ -236,3 +236,39 @@ class Meteorite extends FallingGameObject
 Peer review Dion
 ===
 
+Review Game
+---
+```
+Ik heb monkaS de game gespeeld en ik heb hiervan de broncode in mogen zien. De game is simpel opgezet en het idee is snel duidelijk. In deze game gaat het er om dat twee spelers tegen elkaar spelen en moeten proberen de ander te vinden in een veld van vijanden. Elke vijand beweegt op een bepaalde manier, deze manier kan je als speler proberen na te bootsen of je gaat voor een directe aanval. Wanneer je denkt een speler gevonden te hebben kan je proberen hem aan te vallen, mocht het een speler zijn gaat hij dood anders verdwijnt de vijand en kan de andere speler zien waar jij je bevindt. Er zit ook nog een random feature in de game waarbij je als speler een bom kunt aanroepen die een bepaalde ontploffings grootte heeft en deze zal alle spelers en/of vijanden uitschakelen. Deze manier van spelen is erg spanend en daarom in mijn ogen ook leuk. Vooral het gevoel wanneer je je tegenspeler pakt en hij/zij dit totaal niet zag aankomen is geniaal. Kortom erg verslavend en leuk spelletje!
+```
+Review Code
+---
+```
+
+```
+
+- [x] De code van het individuele project staat op GitHub.
+- [x] De game is online speelbaar.
+- [x] De game bevat minimaal één van de onderstaande extra uitdagingen.
+- [x] De game heeft een startscherm en een eindscherm.
+- [x] Er zijn geen bugs.
+- [x] Het project maakt gebruik van deze OOP principes.
+    - [x] Classes
+    - [x] Encapsulation
+    - [x] Composition
+    - [x] Inheritance
+- [x] De GitHub pagina bevat een ReadMe bestand. Dit bestand bevat:
+    - [x] Per bovengenoemd OOP principe een uitleg: waar is het toegepast, en waarom is het op die plek toegepast. De uitleg is inclusief code voorbeelden.
+    - [x] Een klassendiagram van de game.
+    - [x] Een link naar de peer review die in week 6 is gedaan
+    
+**Extra opdrachten**
+
+- [x] De game ziet er zeer verzorgd uit dankzij goed uitgewerkt UI design en artwork.
+- [ ] De game bevat een hiscore lijst. Scores worden bewaard nadat de game is afgesloten.
+- [x] De game werkt met Canvas in plaats van DOM elementen
+- [x] De game bevat local of online multiplayer.
+- [ ] De game werkt op mobiele schermen en ondersteunt touchscreen controls.
+- [ ] De game maakt gebruik van device api's zoals de camera, microfoon, gyroscoop of GPS.
+- [ ] De game gebruikt een externe library uit de lijst in deze modulewijzer. 
+
