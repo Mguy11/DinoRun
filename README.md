@@ -14,8 +14,8 @@ Je speelt als Dino in een endless game waar het doel is zoveel mogelijk eieren t
 **Versus:** 
 Je speelt hier local multiplayer tegen iemand anders. De opdracht is proberen meer eieren te vangen dan de ander. Je moet wel nog steeds uitkijken voor de meteorieten, want als jij Game Over gaat wint de ander.
 
-Checklist
----
+###Checklist
+
 -[x] De code van het individuele project staat op GitHub.
 -[x] De game is online speelbaar.
 -[x] De game bevat minimaal één van de onderstaande extra uitdagingen.
