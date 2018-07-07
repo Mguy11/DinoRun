@@ -44,7 +44,7 @@ Checklist
 
 Klassendiagram
 ---
-![dinorun](https://user-images.githubusercontent.com/15998532/42403393-32a98d90-8181-11e8-911b-327ea60587d1.png)
+![dinorunnew](https://user-images.githubusercontent.com/15998532/42412293-cec438fa-8209-11e8-88fe-e2d748db9cf0.png)
 
 
 OOP principes
