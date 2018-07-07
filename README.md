@@ -238,14 +238,14 @@ Peer review Dion
 
 Review Game
 ---
-```
+
 Ik heb monkaS de game gespeeld en ik heb hiervan de broncode in mogen zien. De game is simpel opgezet en het idee is snel duidelijk. In deze game gaat het er om dat twee spelers tegen elkaar spelen en moeten proberen de ander te vinden in een veld van vijanden. Elke vijand beweegt op een bepaalde manier, deze manier kan je als speler proberen na te bootsen of je gaat voor een directe aanval. Wanneer je denkt een speler gevonden te hebben kan je proberen hem aan te vallen, mocht het een speler zijn gaat hij dood anders verdwijnt de vijand en kan de andere speler zien waar jij je bevindt. Er zit ook nog een random feature in de game waarbij je als speler een bom kunt aanroepen die een bepaalde ontploffings grootte heeft en deze zal alle spelers en/of vijanden uitschakelen. Deze manier van spelen is erg spanend en daarom in mijn ogen ook leuk. Vooral het gevoel wanneer je je tegenspeler pakt en hij/zij dit totaal niet zag aankomen is geniaal. Kortom erg verslavend en leuk spelletje!
-```
+
 Review Code
 ---
-```
+Ik heb ook de code kunnen inzien. Dit was zeker een aardige uitdaging om twee redenen. Ten eerste kan ik gewoon zien dat dit al gevorderde code is. Alles staat netjes volgens de OOP principes geschreven en heeft duidelijk benamingen etc. In de code wordt ook al wat wiskunde gebruikt en dat werpt zeker zijn vruchten af in de gameplay. Zoals uitgelegd tijdens de game test zie je wel degelijk het verschil qua movements van de spelers en vijanden. Omdat ik sommige stukken in de code nog niet helemaal begrijp wordt het soms wat moeilijker om te lezen. Dat brengt mij bij het tweede punt namelijk dat er geen comments in de code staan. om het allemaal wat beter leesbaar te maken had dit zeker een optie geweest, ik snap wel dat dat hier niet gedaan is aangezien de game zelf gemaakt moest worden. Toch is het dan aan te raden comments te gebruiken, omdat je zelfs soms ook even wat ondersteuning kan gebruiken als je je code terug leest. Zelf moet ik hier ook hard aan werken, daarom noem ik dit punt. 
 
-```
+Verder heb ik niets op of aan te merken en kan ik alleen maar hopen dat deze "LIDL"-game uit mag groeien tot een echte game die door meer mensen gespeeld kan worden, want dit is een geniaal spel.
 
 - [x] De code van het individuele project staat op GitHub.
 - [x] De game is online speelbaar.
@@ -264,7 +264,7 @@ Review Code
     
 **Extra opdrachten**
 
-- [x] De game ziet er zeer verzorgd uit dankzij goed uitgewerkt UI design en artwork.
+- [x] De game ziet er zeer verzorgd uit dankzij goed uitgewerkt UI design en artwork. (Zeer passend bij deze vorm van de game)
 - [ ] De game bevat een hiscore lijst. Scores worden bewaard nadat de game is afgesloten.
 - [x] De game werkt met Canvas in plaats van DOM elementen
 - [x] De game bevat local of online multiplayer.
